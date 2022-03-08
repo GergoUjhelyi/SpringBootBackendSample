@@ -32,19 +32,6 @@ public class User implements Serializable {
 
     private Timestamp updated_at;
 
-    @Override
-    public String toString() {
-        return String.format("User[id=%d, name='%s', email='%s', email_verified_at=%s, is_librarian=%s, remember_token=%s, created_at=%s, updated_at=%s]",
-                id,
-                name,
-                email,
-                email_verified_at == null ? "null" : email_verified_at.toString(),
-                is_librarian,
-                remember_token,
-                created_at.toString(),
-                updated_at.toString());
-    }
-
     public long getId() {
         return id;
     }

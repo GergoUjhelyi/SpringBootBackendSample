@@ -10,26 +10,11 @@ public class Genre {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
     private String name;
-
     private Timestamp created_at;
-
     private Timestamp updated_at;
-
     @Enumerated(EnumType.STRING)
     private Style style;
-
-    public enum Style {
-        primary,
-        secondary,
-        success,
-        danger,
-        warning,
-        info,
-        light,
-        dark
-    }
 
     public long getId() {
         return id;
@@ -69,5 +54,16 @@ public class Genre {
 
     public void setStyle(Style style) {
         this.style = style;
+    }
+
+    public enum Style {
+        primary,
+        secondary,
+        success,
+        danger,
+        warning,
+        info,
+        light,
+        dark
     }
 }
